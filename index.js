@@ -1,9 +1,7 @@
 // server.js
 const express = require("express");
-
-//defiine server
 const app = express();
-
+const PORT = 3000;
 
 // Middleware to parse JSON body
 app.use(express.json());
@@ -63,5 +61,6 @@ app.use((req, res) => {
 });
 
 // Start server
-app.listen(3001, "127.0.0.1", () =>
-console.log(" Server is live on port 3001"))
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
